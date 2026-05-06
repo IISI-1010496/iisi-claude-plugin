@@ -1,0 +1,14 @@
+{
+  "name": "iisi",
+  "owner": {
+    "name": "IISI-1010496"
+  },
+  "description": "IISI 資拓宏宇 Claude Code Plugin 集合",
+  "plugins": [
+    {
+      "name": "iisi-claude-plugin",
+      "source": "./",
+      "description": "IISI 資拓宏宇 Claude Code Plugin 集合（TDX VPN 表單自動填寫等工具）"
+    }
+  ]
+}

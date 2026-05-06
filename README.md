@@ -5,7 +5,8 @@ IISI 資拓宏宇 Claude Code Plugin 集合。
 ## 安裝
 
 ```
-/plugin install https://github.com/IISI-1010496/iisi-claude-plugin
+/plugin marketplace add IISI-1010496/iisi-claude-plugin
+/plugin install iisi-claude-plugin@iisi
 ```
 
 ## Skills
