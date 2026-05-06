@@ -5,5 +5,7 @@
   "author": {
     "name": "IISI-1010496"
   },
-  "repository": "https://github.com/IISI-1010496/iisi-claude-plugin"
+  "repository": "https://github.com/IISI-1010496/iisi-claude-plugin",
+  "keywords": ["iisi", "vpn", "tdx", "motc", "form"],
+  "license": "MIT"
 }
