@@ -97,15 +97,19 @@ Profile 儲存位置: `~/.claude/tdx-vpn-form-profile.json`
 是否已成功提交？(y/n)
 ```
 
-使用者回答 `y` → 將以下記錄 **append** 至 `~/.claude/tdx-vpn-form-submissions.json`：
+使用者回答 `y` → 執行以下步驟：
 
-```json
-{
-  "date": "YYYY-MM-DD",
-  "maintenance_content": "{填入的 content}",
-  "submitted_at": "YYYY-MM-DDTHH:MM:SS"
-}
-```
+1. 讀取現有 `~/.claude/tdx-vpn-form-submissions.json`（不存在則視為 `[]`）。
+2. Append 新記錄：
+   ```json
+   {
+     "date": "YYYY-MM-DD",
+     "maintenance_content": "{填入的 content}",
+     "submitted_at": "YYYY-MM-DDTHH:MM:SS"
+   }
+   ```
+3. **清理舊紀錄**：過濾掉 `date` 距今超過 90 天的紀錄。
+4. 將結果寫回檔案。
 
 若檔案不存在，先建立空陣列 `[]` 再 append。  
 使用者回答 `n` → 不寫入，提示：「可在確認提交後再執行 `/tdx-vpn-form --record` 補記錄。」
