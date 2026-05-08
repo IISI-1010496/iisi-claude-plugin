@@ -53,7 +53,7 @@ Profile 儲存位置: `~/.claude/tdx-vpn-form-profile.json`
 1. 讀取 `~/.claude/tdx-vpn-form-profile.json`。
 2. 執行 `hostname` 取得 `device_name`。
 3. **偵測 IP**：
-   執行 `./scripts/get_ip.ps1` 取得當前網卡的 IPv4 位址。
+   執行 `./scripts/get_ip.ps1 -InterfaceAlias "{network_interface}"` 取得當前網卡的 IPv4 位址（`network_interface` 來自 Profile，如 `Wi-Fi`）。回傳值為純 IP 字串。
 4. **檢查重複提交**：
    讀取 `~/.claude/tdx-vpn-form-submissions.json`（不存在則跳過）。
    若今天（`YYYY-MM-DD`）已有提交紀錄，顯示警告：
